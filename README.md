@@ -16,6 +16,19 @@ Another bonus is that it's the same process regardless of which CI/CD pipeline t
 
 Finally, since secrets are securly stored in the repo, they are versioned. 
 
+### Praise / ah-ha! moments 💡
+
+> "Damn, I forgot to update the CI/CD secrets and my build is failing."
+
+With amber your secrets are version controlled alongside your code.
+
+> "HELP! I'm debugging my pipeline, I wish I could securly decrypt my CI/CD secrets"
+
+With amber you can securly decrypt your secrets.
+
+> "That would be useful for updating and maintaining the secrets because it gets confusing with so many secrets."
+
+
 ## Setup
 
 ### Install amber
