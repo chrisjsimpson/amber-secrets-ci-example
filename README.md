@@ -1,6 +1,20 @@
 # Open Source CI/CD Secrets Management with Amber
 
-- Better tools.
+- Better tools. Better productivity
+
+Normally in GitHub/Gitlab etc, you'd have to create an entry for every secret, per environment,
+and keep updating these. This does not scale.
+
+You could use your CI/CD's secrets apis (if it exists), but there's a better
+way.
+
+With amber, you only need to store **one** secret per environment, *and* they're
+version tracked.
+
+Another bonus is that it's the same process regardless of which CI/CD pipeline tool your using
+(GitHub, GitLab, concourse ci, Jenkins) it's the same pattern, reducing lock-in to your CI/CD system.
+
+Finally, since secrets are securly stored in the repo, they are versioned. 
 
 ## Setup
 
@@ -43,15 +57,6 @@ amber init --amber-yaml amber-production.yaml
 
 ### Set up envrionments (Github CI/CD)
 
-Normally in GitHub you'd have to create an entry for every secret, per environment- this
-does not scale.
-
-With amber, you only need to store **one** secret per environment.
-
-Another bonus is it's the same process regardless of which CI/CD pipeline tool your using
-(GitHub, GitLab, concourse ci, Jenkins) it's the same pattern.
-
-Finally, since secrets are securly stored in the repo, they are versioned. 
 
 ## Detailed step-by-step how to create environments & add secrets in GitHub
 <details>
