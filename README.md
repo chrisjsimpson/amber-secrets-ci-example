@@ -22,12 +22,13 @@ Finally, since secrets are securly stored in the repo, they are versioned.
 
 With amber your secrets are version controlled alongside your code.
 
-> "HELP! I'm debugging my pipeline, I wish I could securly decrypt my CI/CD secrets"
+> "Help! I'm debugging my pipeline, I wish I could securly decrypt my CI/CD secrets to troubleshoot my issue."
 
 With amber you can securly decrypt your secrets.
 
 > "That would be useful for updating and maintaining the secrets because it gets confusing with so many secrets."
 
+Every CI/CD system has a different interface, amber reduces the compexity with [only one](https://xkcd.com/927/) place to manage such secrets.
 
 ## Setup
 
