@@ -2,9 +2,9 @@ name: Staging
 
 on:
   push:
-    branches: [ main ]
+    branches: [ staging ]
   pull_request:
-    branches: [ main ]
+    branches: [ staging ]
   schedule:
     - cron: '30 9 * * *' # 09:30am See https://crontab.guru/#30_9_*_*_*
 
