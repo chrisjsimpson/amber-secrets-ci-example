@@ -5,6 +5,9 @@ and keep updating these. This does not scale.
 
 - Better tools. Better productivity
 
+This is an example repo demonstrating how to use [Amber](https://github.com/fpco/amber) to manage CI/CD secrets across different environments.
+Your branching strategy is up to you, amber does not impose any rules here, this is just an example of how to use `amber` with different environments.
+
 
 ### Praise / ah-ha! moments 💡
 
@@ -203,10 +206,6 @@ export API_KEY="api-key-secret-for-production-environment"
   Verify `AMBER_SECRET` secret saved to environment.
   ![Add amber secret](./images/github/staging-environment-add-secret-amber-secret-saved.png)
 
-  ## References
-
-  [FP Complete Reduces Your Time To Market With Advanced Software Engineering
-  ](https://www.youtube.com/watch?v=1G3FYZEM18U)
 </details>
 
 # Errors
@@ -220,3 +219,7 @@ Caused by:
 
 Did you mistakenly encrypt a value with the wrong secret key (e.g. encrypt a production
 secret using your staging key?) `export` your other secret and `amber print` to check.
+
+## References
+
+[FP Complete Reduces Your Time To Market With Advanced Software Engineering](https://www.youtube.com/watch?v=1G3FYZEM18U)
