@@ -31,7 +31,10 @@ jobs:
       env:
         AMBER_SECRET: ${{ secrets.AMBER_SECRET }}
       run: |
+        # Example printing secrets
         ./amber print --amber-yaml amber-staging.yaml
+        # Example using secrets with automatic masking of secrets
+        ./amber exec --amber-yaml amber-staging.yaml -- sh -c 'echo $API_KEY'
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
