@@ -5,7 +5,8 @@ and keep updating these. This does not scale.
 
 - Better tools. Better productivity
 
-This is an example repo demonstrating how to use [Amber](https://github.com/fpco/amber). Your branching strategy is up to you, amber does not impose any rules here, this is just an example of how to use `amber` with different environments.
+This is an example repo demonstrating how to use [Amber](https://github.com/fpco/amber) to manage CI/CD secrets across different environments.
+Your branching strategy is up to you, amber does not impose any rules here, this is just an example of how to use `amber` with different environments.
 
 
 ### Praise / ah-ha! moments 💡
