@@ -154,6 +154,31 @@ secrets:
     cipher: 7d23a1ccedef3f528c69d3cb9734afe6e77640c2736fa668b30e50f204e1d02cd6b81050b0e9e42f8288f076c52220a0027d31e3e5a50e4675106c60e5e2b670bd0dc382264b367d8c6f5c5af2c7f8e7650421e6eb42
 ```
 
+
+### Create `API_KEY` for production environment
+
+> **Important** remember to `export` the AMBER_SECRET for the environment your working with
+  otherwise, secrets will be encrypted with a different secret key to what you're expecting.
+  It's no less secure, only confusing and you'll see errors when decrypting like:
+  ```
+  Error: Error loading secret key from environment variable AMBER_SECRET
+
+  Caused by:
+      Secret key does not match config file's public key
+  ```
+
+```
+# export the production AMBER_SECRET
+export AMBER_SECRET=<secret-key-production>
+amber --amber-yaml amber-production.yaml encrypt API_KEY api-key-secret-for-production-environment
+```
+
+Verify by printing the secret
+```
+amber print --amber-yaml amber-production.yaml 
+export API_KEY="api-key-secret-for-production-environment"
+```
+
 ### Set up environments (Github CI/CD)
 
 
@@ -183,3 +208,15 @@ secrets:
   [FP Complete Reduces Your Time To Market With Advanced Software Engineering
   ](https://www.youtube.com/watch?v=1G3FYZEM18U)
 </details>
+
+# Errors
+
+```
+Error: Error loading secret key from environment variable AMBER_SECRET
+
+Caused by:
+    Secret key does not match config file's public key
+```
+
+Did you mistakenly encrypt a value with the wrong secret key (e.g. encrypt a production
+secret using your staging key?) `export` your other secret and `amber print` to check.
