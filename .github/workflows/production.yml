@@ -12,7 +12,7 @@ on:
     - cron: '30 9 * * *' # 09:30am See https://crontab.guru/#30_9_*_*_*
 
 jobs:
-  Test-Production:
+  production-example:
 
     runs-on: ubuntu-latest
     environment: production
