@@ -21,7 +21,7 @@ With amber you can securly decrypt your secrets.
 Every CI/CD system has a different interface, amber reduces the compexity with [only one](https://xkcd.com/927/) place to manage such secrets.
 
 
-## tldr: how do I store secrets using amber for different environments?
+## tldr: How do I store secrets using amber for different environments?
 
 1. Init `amber` one-time and put the secret key somewhere safe 🔐
   ```
