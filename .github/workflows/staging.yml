@@ -1,4 +1,7 @@
-name: Staging
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Test
 
 on:
   push:
@@ -6,13 +9,13 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - '30 9 * * *' # 09:30am See https://crontab.guru/#30_9_*_*_*
+    - cron: '30 9 * * *' # 09:30am See https://crontab.guru/#30_9_*_*_*
 
 jobs:
   Test:
 
     runs-on: ubuntu-latest
-    environment: staging 
+    environment: testing
 
     steps:
     - uses: actions/checkout@v2
@@ -20,15 +23,8 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: "3.10"
-    - name: Install amber
-      run: |
-        set -x
-        curl -L https://github.com/fpco/amber/releases/download/v0.1.1/amber-x86_64-unknown-linux-musl > amber
-        chmod +x amber
-        ./amber
     - name: Install dependencies
       run: |
-        env
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
@@ -43,3 +39,4 @@ jobs:
         API_KEY: ${{ secrets.API_KEY }}
       run: |
         python -m pytest -vv
+
