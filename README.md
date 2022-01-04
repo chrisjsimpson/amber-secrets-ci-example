@@ -1,4 +1,4 @@
-# Open Source CI/CD Secrets Management with Amber
+# Open Source CI/CD Secrets Management with Amber example usage Github
 
 Normally in GitHub/Gitlab and other, you have to create an entry for every secret, per environment,
 and keep updating these. This does not scale.
